@@ -1,0 +1,7 @@
+# Data Directory
+
+The dataset is **not included** in this repository due to size and Kaggle's Terms of Use.
+
+To obtain the dataset, please visit the [Garbage Classification dataset on Kaggle](https://www.kaggle.com/datasets/mostafaabla/garbage-classification) and download it as described in the root [README.md](../README.md).
+
+After downloading, extract the dataset into this `data/` folder so the code and notebooks will work.
