@@ -1,6 +1,6 @@
-from tensorflow.keras.applications import MobileNetV2
-from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
-from tensorflow.keras.models import Model
+from keras.applications import MobileNetV2
+from keras.layers import GlobalAveragePooling2D, Dense
+from keras.models import Model
 
 def build_model(input_shape=(224, 224, 3), num_classes=6):
     base = MobileNetV2(input_shape=input_shape, include_top=False, weights='imagenet')
