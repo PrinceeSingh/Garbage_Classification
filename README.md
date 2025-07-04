@@ -49,3 +49,9 @@ This project uses the [Garbage Classification dataset](https://www.kaggle.com/da
 > **Note**: The dataset is not included in this repository due to its size and Kaggle's Terms of Use.
 
 See [`data/README.md`](data/README.md) for more info.
+
+## Screenshot
+
+Here is how the app looks:
+
+![App Screenshot](assets/screenshot(150).png)
