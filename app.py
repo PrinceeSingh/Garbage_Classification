@@ -25,6 +25,22 @@ HTML = """
       .container { max-width: 500px; margin-top: 60px; }
       .card { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
       .prediction { font-size: 1.2rem; }
+      .image-preview { 
+        max-width: 100%; 
+        max-height: 300px; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: none;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+      .preview-container {
+        text-align: center;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -37,8 +53,14 @@ HTML = """
       <div class="card p-4">
         <form method="post" enctype="multipart/form-data">
           <div class="mb-3">
-            <input class="form-control" type="file" name="file" required>
+            <input class="form-control" type="file" name="file" id="fileInput" accept="image/*" required>
           </div>
+          
+          <!-- Image Preview Section -->
+          <div class="preview-container">
+            <img id="imagePreview" class="image-preview" alt="Image Preview">
+          </div>
+          
           <button class="btn btn-primary w-100" type="submit">Classify</button>
         </form>
         {% if prediction %}
@@ -48,9 +70,28 @@ HTML = """
           </div>
         {% endif %}
       </div>
-      <footer class="text-center mt-4 text-muted" style="font-size:0.9rem;">&copy; 2024 Garbage Classifier</footer>
+      <footer class="text-center mt-4 text-muted" style="font-size:0.9rem;">&copy; 2025 Garbage Classifier by Princee</footer>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Image preview functionality
+      document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('imagePreview');
+        
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+          };
+          reader.readAsDataURL(file);
+        } else {
+          preview.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
 """
