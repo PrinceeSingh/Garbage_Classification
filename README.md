@@ -55,3 +55,5 @@ See [`data/README.md`](data/README.md) for more info.
 Here is how the app looks:
 
 ![App Screenshot](assets/Screenshot(150).png)
+![App Screenshot](assets/Screenshot(151).png)
+![App Screenshot](assets/Screenshot(152).png)
