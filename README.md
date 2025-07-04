@@ -47,3 +47,5 @@ This project uses the [Garbage Classification dataset](https://www.kaggle.com/da
 5. The dataset will be available in the `data/` directory.
 
 > **Note**: The dataset is not included in this repository due to its size and Kaggle's Terms of Use.
+
+See [`data/README.md`](data/README.md) for more info.
